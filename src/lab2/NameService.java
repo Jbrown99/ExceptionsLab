@@ -19,6 +19,9 @@ public class NameService {
      * @return the last name
      */
     public String extractLastName(String fullName) {
+        if (fullName == null || fullName.isEmpty()){
+            throw new IllegalArgumentException();
+        }
         
         String[] nameParts = fullName.split(" ");
         return nameParts[nameParts.length - 1];
@@ -32,6 +35,9 @@ public class NameService {
      * @return the first name
      */
     public String extractFirstName(String fullName) {
+        if (fullName == null || fullName.isEmpty() ){
+            throw new IllegalArgumentException();
+        }
         String[] nameParts = fullName.split(" ");
         return nameParts[FIRST_NAME_IDX];
     }
@@ -43,6 +49,9 @@ public class NameService {
      * @return the length of the name or part.
      */
     public int getNameLength(String name) {
+        if(name == null || name.isEmpty() || name.length() < 0){
+            throw new IllegalArgumentException();
+        }
         return name.length();
     }
     

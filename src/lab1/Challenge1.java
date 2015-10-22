@@ -28,7 +28,7 @@ public class Challenge1 {
         String msg = "Your last name is: " + lastName;
         JOptionPane.showMessageDialog(null, msg);
         }catch(NullPointerException npe){
-            JOptionPane.showMessageDialog(null,"Sorry the following isnt possible: "+npe);
+            JOptionPane.showMessageDialog(null,npe);
             
         }
     }
