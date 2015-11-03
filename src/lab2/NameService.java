@@ -18,9 +18,9 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the last name
      */
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName) throws IllegalArgumentException {
         if (fullName == null || fullName.isEmpty()){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Please enter your full name");
         }
         
         String[] nameParts = fullName.split(" ");
