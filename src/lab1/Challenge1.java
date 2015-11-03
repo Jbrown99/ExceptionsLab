@@ -33,9 +33,9 @@ public class Challenge1 {
         }
     }
     
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName)throws IllegalArgumentException  {
         if( fullName == null || fullName.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Sorry please try again");
+            throw new IllegalArgumentException("Please enter your full name");
         }
         
         String[] nameParts = fullName.split(" ");
